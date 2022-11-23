@@ -13,7 +13,7 @@
 		B580B610292E80C500A0D5E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B580B60F292E80C500A0D5E8 /* Preview Assets.xcassets */; };
 		B580B617292E80E100A0D5E8 /* Viga.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B616292E80E100A0D5E8 /* Viga.swift */; };
 		B580B61A292E82F200A0D5E8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B580B618292E82F200A0D5E8 /* DataModel.xcdatamodeld */; };
-		B580B61C292E846A00A0D5E8 /* DataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B61B292E846A00A0D5E8 /* DataConnection.swift */; };
+		B580B61C292E846A00A0D5E8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B61B292E846A00A0D5E8 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		B580B60F292E80C500A0D5E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B580B616292E80E100A0D5E8 /* Viga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viga.swift; sourceTree = "<group>"; };
 		B580B619292E82F200A0D5E8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		B580B61B292E846A00A0D5E8 /* DataConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConnection.swift; sourceTree = "<group>"; };
+		B580B61B292E846A00A0D5E8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 				B580B60E292E80C500A0D5E8 /* Preview Content */,
 				B580B616292E80E100A0D5E8 /* Viga.swift */,
 				B580B618292E82F200A0D5E8 /* DataModel.xcdatamodeld */,
-				B580B61B292E846A00A0D5E8 /* DataConnection.swift */,
+				B580B61B292E846A00A0D5E8 /* DataManager.swift */,
 			);
 			path = "exa-ingweb";
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 				B580B60B292E80C200A0D5E8 /* ContentView.swift in Sources */,
 				B580B61A292E82F200A0D5E8 /* DataModel.xcdatamodeld in Sources */,
 				B580B617292E80E100A0D5E8 /* Viga.swift in Sources */,
-				B580B61C292E846A00A0D5E8 /* DataConnection.swift in Sources */,
+				B580B61C292E846A00A0D5E8 /* DataManager.swift in Sources */,
 				B580B609292E80C200A0D5E8 /* exa_ingwebApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
