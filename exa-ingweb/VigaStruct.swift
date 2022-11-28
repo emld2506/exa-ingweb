@@ -1,6 +1,6 @@
 import Combine
 
-struct Viga:  {
+struct VigaStruct  {
     var clv_obra: Int
     var clv_viga: Int
     var peso: Double

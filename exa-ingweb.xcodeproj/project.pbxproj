@@ -11,9 +11,12 @@
 		B580B60B292E80C200A0D5E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B60A292E80C200A0D5E8 /* ContentView.swift */; };
 		B580B60D292E80C500A0D5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B580B60C292E80C500A0D5E8 /* Assets.xcassets */; };
 		B580B610292E80C500A0D5E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B580B60F292E80C500A0D5E8 /* Preview Assets.xcassets */; };
-		B580B617292E80E100A0D5E8 /* Viga.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B616292E80E100A0D5E8 /* Viga.swift */; };
+		B580B617292E80E100A0D5E8 /* VigaStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B616292E80E100A0D5E8 /* VigaStruct.swift */; };
 		B580B61A292E82F200A0D5E8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B580B618292E82F200A0D5E8 /* DataModel.xcdatamodeld */; };
 		B580B61C292E846A00A0D5E8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B61B292E846A00A0D5E8 /* DataManager.swift */; };
+		B5B8843B293514F900C7673F /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8843A293514F900C7673F /* SaveView.swift */; };
+		B5B8843D2935151300C7673F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8843C2935151300C7673F /* ListView.swift */; };
+		B5B8843F2935153200C7673F /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8843E2935153200C7673F /* UpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +25,12 @@
 		B580B60A292E80C200A0D5E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B580B60C292E80C500A0D5E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B580B60F292E80C500A0D5E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B580B616292E80E100A0D5E8 /* Viga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viga.swift; sourceTree = "<group>"; };
+		B580B616292E80E100A0D5E8 /* VigaStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VigaStruct.swift; sourceTree = "<group>"; };
 		B580B619292E82F200A0D5E8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		B580B61B292E846A00A0D5E8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B5B8843A293514F900C7673F /* SaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
+		B5B8843C2935151300C7673F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		B5B8843E2935153200C7673F /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +65,12 @@
 			children = (
 				B580B608292E80C200A0D5E8 /* exa_ingwebApp.swift */,
 				B580B60A292E80C200A0D5E8 /* ContentView.swift */,
+				B5B8843A293514F900C7673F /* SaveView.swift */,
+				B5B8843E2935153200C7673F /* UpdateView.swift */,
+				B5B8843C2935151300C7673F /* ListView.swift */,
 				B580B60C292E80C500A0D5E8 /* Assets.xcassets */,
 				B580B60E292E80C500A0D5E8 /* Preview Content */,
-				B580B616292E80E100A0D5E8 /* Viga.swift */,
+				B580B616292E80E100A0D5E8 /* VigaStruct.swift */,
 				B580B618292E82F200A0D5E8 /* DataModel.xcdatamodeld */,
 				B580B61B292E846A00A0D5E8 /* DataManager.swift */,
 			);
@@ -147,10 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B580B60B292E80C200A0D5E8 /* ContentView.swift in Sources */,
+				B5B8843F2935153200C7673F /* UpdateView.swift in Sources */,
 				B580B61A292E82F200A0D5E8 /* DataModel.xcdatamodeld in Sources */,
-				B580B617292E80E100A0D5E8 /* Viga.swift in Sources */,
+				B580B617292E80E100A0D5E8 /* VigaStruct.swift in Sources */,
+				B5B8843D2935151300C7673F /* ListView.swift in Sources */,
 				B580B61C292E846A00A0D5E8 /* DataManager.swift in Sources */,
 				B580B609292E80C200A0D5E8 /* exa_ingwebApp.swift in Sources */,
+				B5B8843B293514F900C7673F /* SaveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
