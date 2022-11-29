@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct UpdateView: View {
+    var viga : Viga
+    var cdManager: DataManager
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            TextField("Clave de obra: ", text : viga.clv_obra).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Longitud: ", text : viga.longitud).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Material: ", text : viga.material).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Peso: ", text : viga.peso).textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            Button("Actualizar"){
+                cdManager.actualizarViga(viga: viga)
+            }
+        }.padding()
     }
 }
 
 struct UpdateView_Previews: PreviewProvider {
     static var previews: some View {
-        UpdateView()
+        UpdateView(viga: Viga(), cdManager: DataManager())
     }
 }
