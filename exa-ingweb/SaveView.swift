@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SaveView: View {
-    let cdManager: DataManager
+    var cdManager: DataManager
     @State var clv_obra = ""
     @State var clv_viga = ""
     @State var longitud = ""
@@ -24,7 +24,7 @@ struct SaveView: View {
             TextField("Peso: ", text : $peso).textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button("Guardar"){
-                dcManager.guardarViga(clv_obra: clv_obra, clv_viga: clv_viga, longitud: longitud, material: material, peso: peso)
+                cdManager.guardarViga(clv_obra: clv_obra, clv_viga: clv_viga, longitud: longitud, material: material, peso: peso)
                 clv_viga = ""
                 clv_obra = ""
                 longitud = ""
@@ -32,7 +32,7 @@ struct SaveView: View {
                 peso = ""
             }
             
-        }
+        }.padding()
     }
 }
 
