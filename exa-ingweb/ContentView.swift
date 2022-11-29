@@ -1,17 +1,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    let cdManager: DataManager
+    var cdManager: DataManager
     var body: some View {
         TabView{
-            tabItem(label: "Registro" -> SaveView){
-                
+            SaveView(cdManager: cdManager)
+                .tabItem(){
+                    Image(systemName: "square.and.pencil")
+                    Text("Registrar")
             }
             
-            tabItem(label: "Datos" -> ListView){
-                
+            ListView(cdManager: cdManager, vArray: [Viga].init())
+                .tabItem(){
+                    Image(systemName: "folder")
+                    Text("Registrar")
             }
-        }
+        }.padding()
     }
 }
 
