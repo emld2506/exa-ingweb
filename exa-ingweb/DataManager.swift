@@ -55,8 +55,25 @@ class DataManager {
         }
     }
     
-    func actualizarViga(){
+    func actualizarViga(viga: Viga){
+        let fetchReq : NSFetchRequest<Viga> = Viga.fetchRequest()
+        let predicate = NSPredicate(format: "clv_viga = %@", viga.clv_viga ?? "")
+        fetchReq.predicate = predicate
         
+        do{
+            let datos = try persistentContainer.viewContext.fetch(fetchReq)
+            let v = datos.first
+            v?.clv_obra = viga.clv_obra
+            v?.material = viga.material
+            v?.longitud = viga.longitud
+            v?.peso = viga.peso
+            try persistentContainer.viewContext.save()
+            print("Viga actualizada")
+        }
+        catch{
+            persistentContainer.viewContext.rollback()
+            print("Fallo al intentar actualizar \(error.localizedDescription)")
+        }
     }
     
 }
