@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ListView: View {
-    let cdManager: DataManager
-    var vigaArray: Viga[]
+    var cdManager: DataManager
+    var vArray: [Viga]
+    
     var body: some View {
         VStack{
             List{
-                ForEach(vigaArray, id: \.self){
+                ForEach(vArray, clv_viga: \.self){
                     viga in
                     VStack{
                         Text(viga.clv_obra ?? "")
@@ -21,27 +22,36 @@ struct ListView: View {
                         Text(viga.longitud ?? "")
                         Text(viga.material ?? "")
                         Text(viga.peso ?? "")
+                        Spacer()
+                        HStack{
+                            
+                        }
                     }
                 }.onDelete(perform: {
                     indexSet in
                     indexSet.forEach({ index in
-                        let vigaDel = vigaArray[index]
+                        let vigaDel = vArray[index]
                         cdManager.borrarViga(viga: vigaDel)
-                        listaVigas()
+                        vArray = cdManager.listaVigas()
                     })
                 })
             }
-        }.padding()
-            .onAppear(perform: listaVigas())
+        }.padding().onAppear(perform: listaElementos())
+            
     }
+    
+    mutating func listaElementos() -> Void {
+        self.vArray = cdManager.listaVigas()
+    }
+    
 }
 
-func listaVigas(){
-    vigaArray = cdManager.listaVigas()
-}
+
+
+
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(cdManager: DataManager())
+        ListView(cdManager: DataManager(), vArray: [Viga].init())
     }
 }
