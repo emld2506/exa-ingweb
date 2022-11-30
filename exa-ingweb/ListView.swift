@@ -20,11 +20,8 @@ struct ListView: View {
                         viga in
                         VStack{
                             NavigationLink(destination: UpdateView(viga: viga, cdManager : cdManager)){
-                                Text(viga.clv_obra ?? "")
-                                Text(viga.clv_viga ?? "")
-                                Text(viga.longitud ?? "")
-                                Text(viga.material ?? "")
-                                Text(viga.peso ?? "")
+                                Text("Obra ID: \(viga.clv_obra ?? "")")
+                                Text("Viga ID: \(viga.clv_viga ?? "")")
                             }
                         }.padding()
                     }.onDelete(perform: {
@@ -49,10 +46,6 @@ struct ListView: View {
     }
     
 }
-
-
-
-
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
