@@ -13,7 +13,7 @@ struct ContentView: View {
             ListView(cdManager: cdManager, vArray: [Viga].init())
                 .tabItem(){
                     Image(systemName: "folder")
-                    Text("Registrar")
+                    Text("Inventario")
             }
         }.padding()
     }
