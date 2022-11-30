@@ -8,19 +8,33 @@
 import SwiftUI
 
 struct UpdateView: View {
-    var viga : Viga
+    @State var viga : Viga
+    @State var clv_obra = ""
+    @State var longitud = ""
+    @State var material = ""
+    @State var peso = ""
     var cdManager: DataManager
     var body: some View {
-        HStack{
-            TextField("Clave de obra: ", text : viga.clv_obra).textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField("Longitud: ", text : viga.longitud).textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField("Material: ", text : viga.material).textFieldStyle(RoundedBorderTextFieldStyle())
-            TextField("Peso: ", text : viga.peso).textFieldStyle(RoundedBorderTextFieldStyle())
+        VStack{
+            TextField("Clave de obra: ", text : $clv_obra).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Longitud: ", text : $longitud).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Material: ", text : $material).textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Peso: ", text : $peso).textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button("Actualizar"){
+                viga.clv_obra = clv_obra
+                viga.longitud = longitud
+                viga.material = material
+                viga.peso = peso
                 cdManager.actualizarViga(viga: viga)
             }
         }.padding()
+            .onAppear{
+                clv_obra = viga.clv_obra ?? ""
+                longitud = viga.longitud ?? ""
+                material = viga.material ?? ""
+                peso = viga.peso ?? ""
+            }
     }
 }
 
